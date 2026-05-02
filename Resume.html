@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutvik Chovatiya - Resume</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e7eb;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            min-height: 1122px;
+            /* A4 Height */
+            overflow: hidden;
+        }
+
+        /* 🖨️ PDF Print Settings */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                margin: 0;
+                padding: 0;
+            }
+
+            .resume-container {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                min-height: 100vh;
+            }
+
+            .print-btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800">
+
+    <!-- Print Button -->
+    <div class="fixed bottom-8 right-8 z-50 print-btn">
+        <button onclick="window.print()"
+            class="bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-bold py-3 px-6 rounded-full shadow-xl transition-all flex items-center gap-2">
+            <i class="fa-solid fa-download"></i> Save as PDF
+        </button>
+    </div>
+
+    <!-- Resume Container -->
+    <div class="resume-container flex flex-row">
+
+        <!-- LEFT SIDEBAR (DARK) -->
+        <div class="w-[35%] bg-[#111827] text-gray-300 p-8 flex flex-col gap-8">
+
+            <!-- Profile Photo -->
+            <div class="flex justify-center mt-4">
+                <div
+                    class="w-40 h-40 rounded-full overflow-hidden border-[3px] border-cyan-400 p-1 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
+                    <img src="C:\Users\rutvi\Downloads\Resume\profile image.png" alt="Rutvik"
+                        class="w-full h-full rounded-full object-cover">
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3
+                    class="text-white font-bold tracking-widest uppercase mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-address-card text-cyan-400"></i> Contact
+                </h3>
+                <ul class="space-y-3 text-[11px] font-medium">
+                    <li class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded bg-gray-800 flex items-center justify-center text-cyan-400"><i
+                                class="fa-solid fa-phone"></i></div> +91 76984 28545
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded bg-gray-800 flex items-center justify-center text-cyan-400"><i
+                                class="fa-solid fa-envelope"></i></div> <span
+                            class="truncate">rutvikchovatiya269@gmail.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded bg-gray-800 flex items-center justify-center text-cyan-400"><i
+                                class="fa-solid fa-location-dot"></i></div> Surat, Gujarat
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded bg-gray-800 flex items-center justify-center text-cyan-400"><i
+                                class="fa-brands fa-linkedin-in"></i></div> /in/rutvik-chovatiya
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h3
+                    class="text-white font-bold tracking-widest uppercase mb-5 border-b border-gray-700 pb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Education
+                </h3>
+
+                <!-- Flexbox Timeline (Foolproof alignment) -->
+                <div class="flex gap-3">
+                    <div class="flex flex-col items-center mt-1">
+                        <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
+                        <div class="w-[2px] h-full bg-gray-700 my-1"></div>
+                    </div>
+                    <div class="pb-5">
+                        <h4 class="text-white font-bold text-[13px]">B.C.A</h4>
+                        <p class="text-[11px] text-gray-400 font-medium">Vidyabharti Trust College</p>
+                        <p class="text-[10px] text-cyan-400 font-bold mt-1 tracking-wider">2021 - 2024</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <div class="flex flex-col items-center mt-1">
+                        <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
+                        <div class="w-[2px] h-full bg-transparent my-1"></div>
+                    </div>
+                    <div class="pb-1">
+                        <h4 class="text-white font-bold text-[13px]">HSC (12th Commerce)</h4>
+                        <p class="text-[10px] text-cyan-400 font-bold mt-1 tracking-wider">2020 - 2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate -->
+            <div>
+                <h3
+                    class="text-white font-bold tracking-widest uppercase mb-5 border-b border-gray-700 pb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-certificate text-cyan-400"></i> Certificate
+                </h3>
+
+                <div class="flex gap-3">
+                    <div class="flex flex-col items-center mt-1">
+                        <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div>
+                        <div class="w-[2px] h-full bg-transparent my-1"></div>
+                    </div>
+                    <div class="pb-1">
+                        <h4 class="text-white font-bold text-[13px]">Graphic & UI-UX Design</h4>
+                        <p class="text-[11px] text-gray-400 font-medium">Red & White Skill Education</p>
+                        <p class="text-[10px] text-cyan-400 font-bold mt-1 tracking-wider">2025 (Running)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Software & AI Tools -->
+            <div class="flex flex-col gap-6">
+                <!-- TOOLS -->
+                <div>
+                    <h3
+                        class="text-[#FFD000] font-black tracking-widest uppercase text-[11px] mb-4 flex items-center gap-3">
+                        TOOLS <span class="flex-1 h-[1px] bg-gray-700"></span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="photoshop.png" class="w-full h-full object-contain" alt="Photoshop">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="illustrator.png" class="w-full h-full object-contain" alt="Illustrator">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="after-effects.png" class="w-full h-full object-contain" alt="After Effects">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg"
+                                class="w-full h-full object-contain rounded-sm" alt="InDesign">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                                class="w-full h-full object-contain" alt="Figma">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
+                                class="w-full h-full object-contain" alt="Canva">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/5/59/Coreldraw_x8.png"
+                                class="w-full h-full object-contain" alt="CorelDraw">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI TOOLS -->
+                <div>
+                    <h3
+                        class="text-[#FFD000] font-black tracking-widest uppercase text-[11px] mb-4 flex items-center gap-3">
+                        AI TOOLS <span class="flex-1 h-[1px] bg-gray-700"></span>
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-1.5 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="../portfolio%20(1)/Gamma.jpeg" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-1.5 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="../portfolio%20(1)/Gemini.jpeg" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-1.5 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="../portfolio%20(1)/Chatgpt.jpeg" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <div
+                            class="w-[46px] h-[46px] bg-[#161A23] rounded-xl border border-gray-800 p-1.5 shadow-[0_2px_10px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                            <img src="../portfolio%20(1)/Stich.jpeg" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div>
+                <h3
+                    class="text-white font-bold tracking-widest uppercase mb-4 border-b border-gray-700 pb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-language text-cyan-400"></i> Languages
+                </h3>
+                <div class="flex gap-2 text-[10px] font-bold tracking-wider uppercase">
+                    <span class="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-white">Gujarati</span>
+                    <span class="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-white">Hindi</span>
+                    <span class="px-3 py-1 bg-gray-800 border border-gray-700 rounded-full text-white">English</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT CONTENT (LIGHT) -->
+        <div class="w-[65%] bg-white p-10 flex flex-col gap-8">
+
+            <!-- Header Text -->
+            <div class="border-b-[3px] border-gray-100 pb-6 pt-4">
+                <h1
+                    class="text-[3.5rem] font-black text-gray-900 tracking-widest leading-none mb-2 font-heading uppercase">
+                    Rutvik <span class="text-cyan-600">Chovatiya</span>
+                </h1>
+                <h2 class="text-[1.1rem] font-bold text-gray-500 tracking-[0.2em] uppercase">UI/UX & Graphic Designer
+                </h2>
+            </div>
+
+            <!-- Profile Summary -->
+            <div>
+                <h2 class="text-2xl font-black text-gray-900 mb-4 flex items-center gap-3 font-heading uppercase">
+                    <span class="w-8 h-[3px] bg-cyan-500"></span> Profile
+                </h2>
+                <p class="text-[13px] text-gray-600 leading-relaxed font-medium text-justify">
+                    Creative and detail-oriented UI/UX Designer with a strong passion for designing visually appealing
+                    and user-friendly digital experiences. Skilled in creating modern website and mobile app interfaces
+                    with a focus on usability, clarity, and conversion-driven design. Experienced in wireframing,
+                    prototyping, and building design systems using industry-standard tools.
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div>
+                <h2 class="text-2xl font-black text-gray-900 mb-4 flex items-center gap-3 font-heading uppercase">
+                    <span class="w-8 h-[3px] bg-cyan-500"></span> Expertise
+                </h2>
+                <div class="flex flex-wrap gap-2.5">
+                    <span
+                        class="px-4 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 text-[11px] font-bold tracking-wider rounded uppercase shadow-sm">UI/UX
+                        Design</span>
+                    <span
+                        class="px-4 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 text-[11px] font-bold tracking-wider rounded uppercase shadow-sm">Wireframing</span>
+                    <span
+                        class="px-4 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 text-[11px] font-bold tracking-wider rounded uppercase shadow-sm">Prototyping</span>
+                    <span
+                        class="px-4 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 text-[11px] font-bold tracking-wider rounded uppercase shadow-sm">User
+                        Research</span>
+                    <span
+                        class="px-4 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 text-[11px] font-bold tracking-wider rounded uppercase shadow-sm">Branding</span>
+                    <span
+                        class="px-4 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 text-[11px] font-bold tracking-wider rounded uppercase shadow-sm">Typography</span>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="flex-1">
+                <h2 class="text-2xl font-black text-gray-900 mb-5 flex items-center gap-3 font-heading uppercase">
+                    <span class="w-8 h-[3px] bg-cyan-500"></span> Key Projects
+                </h2>
+
+                <div class="space-y-6">
+                    <!-- Project 1 -->
+                    <div class="relative pl-6">
+                        <div class="absolute left-0 top-1.5 w-2 h-2 bg-cyan-500 rounded-sm transform rotate-45"></div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-900">Parkly - Smart Parking App</h3>
+                            <span
+                                class="text-[10px] font-bold bg-cyan-50 text-cyan-700 px-2 py-1 rounded uppercase tracking-wider">UI/UX
+                                Design</span>
+                        </div>
+                        <p class="text-[11px] font-bold text-gray-400 mb-2 tracking-widest uppercase">Mobile Application
+                            Case Study</p>
+                        <p class="text-[13px] text-gray-600 font-medium leading-relaxed">
+                            A comprehensive UI/UX case study focusing on intuitive user flow and solving real-world
+                            parking challenges through modern interfaces. Designed seamless booking and tracking
+                            screens.
+                        </p>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="relative pl-6">
+                        <div class="absolute left-0 top-1.5 w-2 h-2 bg-cyan-500 rounded-sm transform rotate-45"></div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-900">Code IT Solutions</h3>
+                            <span
+                                class="text-[10px] font-bold bg-cyan-50 text-cyan-700 px-2 py-1 rounded uppercase tracking-wider">Branding</span>
+                        </div>
+                        <p class="text-[11px] font-bold text-gray-400 mb-2 tracking-widest uppercase">Brand Identity
+                            Design</p>
+                        <p class="text-[13px] text-gray-600 font-medium leading-relaxed">
+                            Developed a strong and modern brand identity for an IT solutions company. Created a refined
+                            logo, color palette, and corporate visual assets reflecting tech-forward aesthetics.
+                        </p>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <!-- Portfolio QR Code Section -->
+                    <div
+                        class="mt-4 bg-gray-50/50 border border-gray-200 border-dashed rounded-xl p-4 flex items-center gap-5 shadow-sm">
+                        <div class="bg-white p-2 border border-gray-200 rounded-lg shadow-sm shrink-0">
+                            <!-- QR Code generated pointing to your Vercel portfolio -->
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://rutvikportfolio-one.vercel.app/"
+                                alt="Portfolio QR Code" class="w-16 h-16 object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-[#1A1F2C] font-black tracking-widest uppercase text-sm mb-1.5">View Digital
+                                Portfolio</h4>
+                            <p class="text-xs text-gray-500 font-medium leading-relaxed pr-2">Scan to see my latest case
+                                studies and interactive prototypes.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
