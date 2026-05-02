@@ -192,6 +192,34 @@
             object-fit: cover;
             border-radius: 10px;
         }
+
+        /* Wave Effect for Grid Tools on Hover */
+        @keyframes hover-wave {
+            0% {
+                transform: translateY(-12px) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-12px) rotate(-8deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(8deg);
+            }
+
+            75% {
+                transform: translateY(-12px) rotate(-4deg);
+            }
+
+            100% {
+                transform: translateY(-12px) rotate(0deg);
+            }
+        }
+
+        .wave-hover:hover {
+            animation: hover-wave 0.8s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
     </style>
 </head>
 
@@ -294,7 +322,8 @@
                 <img src="Gamma.jpeg" alt="Gamma">
             </div>
             <!-- Bottom Right -->
-            <div class="tool-icon animate-tool-2 bottom-[15%] right-[10%] md:bottom-[20%] md:right-[18%]" title="ChatGPT">
+            <div class="tool-icon animate-tool-2 bottom-[15%] right-[10%] md:bottom-[20%] md:right-[18%]"
+                title="ChatGPT">
                 <img src="Chatgpt.jpeg" alt="ChatGPT">
             </div>
         </div>
@@ -409,48 +438,48 @@
                 <div class="flex flex-wrap justify-center gap-6">
                     <!-- Standard UI/UX & AI Tools -->
                     <div data-aos="zoom-in" data-aos-delay="100"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(49,168,255,0.1)] hover:shadow-[0_0_25px_rgba(49,168,255,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#31A8FF] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(49,168,255,0.1)] hover:shadow-[0_0_25px_rgba(49,168,255,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#31A8FF] p-1"
                         title="Photoshop">
                         <img src="Photoshop.jpeg" alt="Ps" class="w-full h-full object-cover rounded-xl">
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="200"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(242,78,30,0.1)] hover:shadow-[0_0_25px_rgba(242,78,30,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#F24E1E] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(242,78,30,0.1)] hover:shadow-[0_0_25px_rgba(242,78,30,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#F24E1E] p-1"
                         title="Figma">
                         <img src="Figma.jpeg" alt="Figma" class="w-full h-full object-cover rounded-xl">
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="300"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(255,154,0,0.1)] hover:shadow-[0_0_25px_rgba(255,154,0,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#FF9A00] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(255,154,0,0.1)] hover:shadow-[0_0_25px_rgba(255,154,0,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#FF9A00] p-1"
                         title="Illustrator">
                         <img src="Ai.jpeg" alt="Ai" class="w-full h-full object-cover rounded-xl">
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="400"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(0,196,204,0.1)] hover:shadow-[0_0_25px_rgba(0,196,204,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#00C4CC] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(0,196,204,0.1)] hover:shadow-[0_0_25px_rgba(0,196,204,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#00C4CC] p-1"
                         title="Canva">
                         <img src="Canva.jpeg" alt="Canva" class="w-full h-full object-cover rounded-xl">
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="500"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(212,163,115,0.1)] hover:shadow-[0_0_25px_rgba(212,163,115,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#D4A373] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(212,163,115,0.1)] hover:shadow-[0_0_25px_rgba(212,163,115,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#D4A373] p-1"
                         title="Behance">
                         <img src="Behance.jpeg" alt="Behance" class="w-full h-full object-cover rounded-xl">
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="600"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(255,51,102,0.1)] hover:shadow-[0_0_25px_rgba(255,51,102,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#FF3366] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(255,51,102,0.1)] hover:shadow-[0_0_25px_rgba(255,51,102,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#FF3366] p-1"
                         title="Gamma">
                         <img src="Gamma.jpeg" alt="Gamma" class="w-full h-full object-cover rounded-xl">
                     </div>
 
                     <div data-aos="zoom-in" data-aos-delay="700"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(142,117,178,0.1)] hover:shadow-[0_0_25px_rgba(142,117,178,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#8E75B2] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(142,117,178,0.1)] hover:shadow-[0_0_25px_rgba(142,117,178,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#8E75B2] p-1"
                         title="Google Gemini">
                         <img src="Gemini.jpeg" alt="Gemini" class="w-full h-full object-cover rounded-xl">
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="800"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(30,160,110,0.1)] hover:shadow-[0_0_25px_rgba(30,160,110,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#1EA06E] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(30,160,110,0.1)] hover:shadow-[0_0_25px_rgba(30,160,110,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#1EA06E] p-1"
                         title="ChatGPT">
                         <img src="Chatgpt.jpeg" alt="ChatGPT" class="w-full h-full object-cover rounded-xl">
                     </div>
                     <div data-aos="zoom-in" data-aos-delay="900"
-                        class="w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(0,196,204,0.1)] hover:shadow-[0_0_25px_rgba(0,196,204,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#00C4CC] p-1"
+                        class="wave-hover w-16 h-16 flex items-center justify-center bg-[#151515] rounded-2xl shadow-[0_0_15px_rgba(0,196,204,0.1)] hover:shadow-[0_0_25px_rgba(0,196,204,0.6)] hover:-translate-y-3 transition-all cursor-pointer border border-white/10 hover:border-[#00C4CC] p-1"
                         title="Stitch">
                         <img src="Stich.jpeg" alt="Stitch" class="w-full h-full object-cover rounded-xl">
                     </div>
@@ -537,10 +566,10 @@
                 <div class="bg-[#0f0f0f] border border-white/5 p-8 rounded-3xl flex flex-col items-center text-center card justify-center"
                     data-aos="zoom-in" data-aos-delay="400">
                     <div class="flex gap-4">
-                        <a href="#"
+                        <a href="https://www.behance.net/rcgaming8" target="_blank"
                             class="w-14 h-14 bg-white/5 hover:bg-cyan-500 hover:shadow-[0_0_20px_#00f2fe] hover:text-white flex items-center justify-center rounded-2xl text-2xl transition-all duration-300 hover:-translate-y-2"><i
                                 class="fa-brands fa-behance"></i></a>
-                        <a href="#"
+                        <a href="https://www.linkedin.com/in/rutvik-chovatiya-385b40280" target="_blank"
                             class="w-14 h-14 bg-white/5 hover:bg-cyan-500 hover:shadow-[0_0_20px_#00f2fe] hover:text-white flex items-center justify-center rounded-2xl text-xl transition-all duration-300 hover:-translate-y-2"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
                     </div>
