@@ -85,9 +85,28 @@
 
             <!-- Profile Photo -->
             <div class="flex justify-center mt-4">
-                <div
-                    class="w-36 h-36 rounded-full overflow-hidden border-[3px] border-cyan-400 p-1 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
-                    <img src="profile image1.png" alt="Rutvik" class="w-full h-full rounded-full object-cover">
+                <div class="relative w-36 h-36">
+                    <!-- Tool 1 (Top Left) -->
+                    <div class="absolute -left-3 top-2 w-8 h-8 rounded-lg bg-[#161A23] p-1 border border-gray-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] z-10 flex items-center justify-center hover:scale-110 transition-transform">
+                        <img src="Figma.jpeg" class="w-full h-full object-contain rounded-md" alt="Figma">
+                    </div>
+                    <!-- Tool 2 (Top Right) -->
+                    <div class="absolute -right-3 top-2 w-8 h-8 rounded-lg bg-[#161A23] p-1 border border-gray-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] z-10 flex items-center justify-center hover:scale-110 transition-transform">
+                        <img src="photoshop.png" class="w-full h-full object-contain rounded-md" alt="Photoshop">
+                    </div>
+                    <!-- Tool 3 (Bottom Left) -->
+                    <div class="absolute -left-1 bottom-4 w-8 h-8 rounded-lg bg-[#161A23] p-1 border border-gray-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] z-10 flex items-center justify-center hover:scale-110 transition-transform">
+                        <img src="illustrator.png" class="w-full h-full object-contain rounded-md" alt="Illustrator">
+                    </div>
+                    <!-- Tool 4 (Bottom Right) -->
+                    <div class="absolute -right-1 bottom-4 w-8 h-8 rounded-lg bg-[#161A23] p-1 border border-gray-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] z-10 flex items-center justify-center hover:scale-110 transition-transform">
+                        <img src="Canva.jpeg" class="w-full h-full object-contain rounded-md" alt="Canva">
+                    </div>
+
+                    <!-- Profile Image -->
+                    <div class="w-full h-full rounded-full overflow-hidden border-[3px] border-cyan-400 p-1 shadow-[0_0_20px_rgba(34,211,238,0.3)]">
+                        <img src="profile image1.png" alt="Rutvik" class="w-full h-full rounded-full object-cover object-top">
+                    </div>
                 </div>
             </div>
 
