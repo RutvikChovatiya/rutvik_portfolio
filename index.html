@@ -25,17 +25,17 @@
 
         /* --- 🌟 Creative Infinite Animations 🌟 --- */
         .neon-text {
-            text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.2);
             animation: pulse-glow 2s infinite alternate;
         }
 
         @keyframes pulse-glow {
             0% {
-                text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+                text-shadow: 0 0 8px rgba(0, 242, 254, 0.2);
             }
 
             100% {
-                text-shadow: 0 0 30px rgba(0, 242, 254, 0.8), 0 0 10px rgba(79, 172, 254, 0.5);
+                text-shadow: 0 0 15px rgba(0, 242, 254, 0.5), 0 0 5px rgba(79, 172, 254, 0.3);
             }
         }
 
@@ -260,7 +260,8 @@
             <h1 class="text-5xl md:text-7xl font-bold mb-4 neon-text tracking-tight" data-aos="zoom-in"
                 data-aos-delay="400">Rutvik <br><span class="gradient-text">Chovatiya</span></h1>
             <h3 class="text-2xl md:text-3xl font-medium text-cyan-400 mb-6" data-aos="fade-up" data-aos-delay="600">
-                UI/UX & Graphic Designer</h3>
+                <span id="typing-text"></span><span class="animate-pulse">|</span>
+            </h3>
 
             <p class="max-w-xl text-gray-400 mb-10 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="800">
                 Creative and detail-oriented UI/UX Designer with a strong passion for designing visually appealing and
@@ -662,6 +663,41 @@
             offset: 100,
             easing: 'ease-in-out-cubic'
         });
+
+        // Typing Effect
+        const textArray = ["UI/UX Designer", "Graphic Designer", "Product Designer"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById("typing-text");
+
+        function typeEffect() {
+            const currentText = textArray[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000; // Pause at the end
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % textArray.length;
+                typeSpeed = 500; // Pause before typing next word
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // Start the typing effect
+        setTimeout(typeEffect, 1000);
     </script>
 </body>
 
